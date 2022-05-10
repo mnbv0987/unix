@@ -1,0 +1,11 @@
+echo "Enter two numbers " 
+read a b
+echo "Enter numbers are a=$a and b=$b"
+a=$(($a+$b))
+b=$(($a-$b))
+a=$(($a-$b))
+echo "After swapping values are a=$a b=$b"
+OUTPUT: 
+Enter two numbers 10 20
+Enter numbers are a=10 and b=20 
+After swapping values are a=20 b=10
