@@ -1,0 +1,83 @@
+1. Search a string in the file.
+Description: It will result all the lines having specified string.
+Syntax: I) grep “string” filename.extension
+or
+II) grep -i “string” filename.extension
+OUTPUT:
+
+[student@it122 ~]$ cat s.txt
+\SE IT
+TE IT
+BE IT
+se it
+te it
+be it
+
+[student@it122 ~]$ grep "IT" s.txt
+SE IT
+TE IT
+BE IT
+
+[student@it122 ~]$ grep "it" s.txt
+se it
+te it
+be it
+
+[student@it122 ~]$ grep -i "IT" s.txt
+SE IT
+TE IT
+BE IT
+se it
+te it
+be it
+
+2. Displaying line number.
+Description: It will display line having specific string.
+Syntax: grep -n “string” filename.extension
+OUTPUT:
+
+[student@it122 ~]$ grep -n "IT" s.txt
+1:SE IT
+2:TE IT
+3:BE IT
+
+3. Display n lines before match.
+Description: It will display line before/ after/ around the match.
+Syntax: grep -B 2 -i “IT” filename.extension
+or
+grep -A 2 -i “IT” filename.extension
+or
+grep -C 2 -i “IT” filename.extension
+OUTPUT:
+
+[student@it122 ~]$ grep -A 2 -n "IT" f.txt
+1:aslam IT 10000
+2-shaibaz Electrical 20000
+3:atharva IT 20000
+4:pranit IT 15000
+5-ayan EXTC 22000
+6-tariq Electrical 25000
+
+[student@it122 ~]$ grep -B 2 -n "IT" f.txt
+1:aslam IT 10000
+2-shaibaz Electrical 20000
+3:atharva IT 20000
+4:pranit IT 15000
+
+[student@it122 ~]$ grep -b 2 -n "IT" f.txt
+grep: IT: No such file or directory
+f.txt:2:15:shaibaz Electrical 20000
+f.txt:3:40:atharva IT 20000
+f.txt:5:73:ayan EXTC 22000
+f.txt:6:89:tariq Electrical 25000
+f.txt:7:112:obaid Mechanical 22000
+
+4. Position of line in a line.
+Description: The output is not the position instead it is the byte offset of whole file.
+Syntax: grep -o -b “IT” filename.extension
+OUTPUT:
+
+[student@it122 ~]$ grep -o -b "IT" f.txt
+6:IT
+48:IT
+64:IT
