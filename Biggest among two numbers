@@ -1,0 +1,11 @@
+echo "Enter two numbers:"
+read a b
+if [ $a -gt $b ]
+then
+ echo "$a is biggest."
+elif [ $b -gt $a ]
+then
+echo "$b is biggest"
+else
+echo "$a and $b are equal."
+fi
