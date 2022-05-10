@@ -1,0 +1,9 @@
+echo "Enter two numbers with operator in between"
+read a opr b
+case $opr in 
+	+)echo $(( $a + $b ));;
+	-)echo $(( $a - $b ));;
+	*)echo $(( $a * $b ));;
+	/)echo $(( $a / $b ));;
+	%)echo $(( $a % $b ));;
+esac
