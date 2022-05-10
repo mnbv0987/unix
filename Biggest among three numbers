@@ -1,0 +1,13 @@
+3. Biggest among three numbers 
+PROGRAM: 
+echo "Enter three numbers:"
+read a b c
+if [ $a -gt $b -a $a -gt $c ]
+then
+ echo "$a is biggest."
+elif [ $b -gt $c -a $b -g $a ]
+then
+echo "$b is biggest"
+else
+echo "$c is biggest."
+fi
