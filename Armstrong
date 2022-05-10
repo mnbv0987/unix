@@ -1,0 +1,20 @@
+. Armstrong 
+PROGRAM: 
+echo "Enter a number" 
+read n
+d=0 
+sum=0 
+m=$n
+while [ $n -gt 0 ] 
+do
+ d=$(($n % 10))
+ c=$(($d*$d*$d)) 
+ n=$(($n/10)) 
+ sum=$(($sum +$c)) 
+done
+if [ $m -eq $sum ] 
+then
+ echo "Armstrong number" 
+else
+ echo "Not an Armstrong number" 
+fi
