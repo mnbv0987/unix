@@ -1,0 +1,12 @@
+4. Arithmetic Operations 
+PROGRAM: 
+echo "Enter two numbers " 
+read a b
+ad=$(($a+$b))
+echo "$a + $b = $ad"
+ s=$(($a-$b))
+echo "$a - $b = $s" 
+ m=$(($a*$b))
+echo "$a x $b = $m" 
+ d=$(($a/$b))
+echo "$a / $b = $d"
