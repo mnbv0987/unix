@@ -1,0 +1,9 @@
+BEGIN{
+print"enter even no of range ";
+getline num;
+for(i=1;i<=num;i++){
+if(i%2==0){
+print i,"is even no";
+}
+}
+}
